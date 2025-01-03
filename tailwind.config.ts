@@ -12,6 +12,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "#00EAFF",
+      },
+      fontFamily: {
+        mono: ["var(--font-geist-mono)"],
       },
     },
   },
