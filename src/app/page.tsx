@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Work */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Work
           </h2>
@@ -60,7 +60,7 @@ export default function Home() {
           >
             <span>
               <h3 className="text-lg font-bold group-hover:text-accent">
-                Rightpoint
+                Rightpoint (Genpact)
               </h3>
               <p className="text-gray-400 text-sm">
                 Software Engineer 3 (January 2022 - Present)
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Projects */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Projects
           </h2>
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Blog */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Blog
           </h2>
@@ -202,7 +202,7 @@ export default function Home() {
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Links
           </h2>

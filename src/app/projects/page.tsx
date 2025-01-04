@@ -1,76 +1,6 @@
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
-
-const projects = [
-  {
-    title: "Scalable E-Commerce Backend",
-    description: "",
-    role: "Creator & Maintainer",
-    period: "",
-    achievements: [
-      "Built a scalable e-commerce backend with microservices",
-      "Ensured reliability, fault tolerance, and efficient deployments",
-      "30+ ⭐ Stars on GitHub",
-    ],
-    technologies: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Docker",
-      "Nginx",
-      "Kubernetes",
-      "Stripe",
-    ],
-    href: "https://github.com/Thisisaarush/scalable-ecommerce-backend",
-  },
-  {
-    title: "URL Shortening Service",
-    description:
-      "A URL shortening service with features including URL shortening, redirection, updating, and deletion, along with caching using Redis and rate limiting for performance optimization.",
-    role: "Creator & Maintainer",
-    period: "",
-    achievements: [
-      "Caching using Redis and rate limiting for performance optimization",
-    ],
-    technologies: [
-      "Node.js",
-      "Express.js",
-      "Redis",
-      "Docker",
-      "MongoDB",
-      "Morgan",
-    ],
-    href: "https://github.com/Thisisaarush/url-shortening-service",
-  },
-  {
-    title: "Shoez-Store",
-    description:
-      " A full-stack e-commerce website with features like product management, user authentication, cart management, and payment gateway integration.",
-    role: "Creator & Maintainer",
-    period: "",
-    achievements: [
-      "Product management, user authentication, cart management",
-      "RazorPay Payment Gateway Integration",
-      "Secure Login and Registration with bcrypt and JWT",
-    ],
-    technologies: [
-      "Typescript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Zustand",
-      "GraphQL",
-      "Framer",
-      "Motion",
-      "Prisma",
-      "RazorPay",
-    ],
-    href: "https://shoez-store.vercel.app/",
-  },
-]
+import { projectData as projects } from "@/lib/projectsData"
 
 export default function ProjectsPage() {
   return (
@@ -116,7 +46,7 @@ export default function ProjectsPage() {
               {project.achievements.length > 0 && (
                 <div>
                   <h3 className="text-white font-semibold mb-2">
-                    Achievements
+                    Features & Achievements
                   </h3>
                   <ul className="list-disc list-inside space-y-1 text-gray-400">
                     {project.achievements.map((achievement, index) => (
@@ -132,7 +62,7 @@ export default function ProjectsPage() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 text-sm text-gray-300 bg-gray-800/50 rounded"
+                      className="px-2 py-1 text-sm text-gray-300 bg-accent/10 rounded"
                     >
                       {tech?.toLowerCase()}
                     </span>
