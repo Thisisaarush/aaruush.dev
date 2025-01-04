@@ -167,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Blog */}
-        {/* <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Blog
           </h2>
@@ -178,7 +178,7 @@ export default function Home() {
                 className="flex justify-between items-center group"
               >
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/blogs/${post.slug}`}
                   className="text-gray-200 hover:text-accent transition-colors duration-200"
                 >
                   {post.metadata.title.toLowerCase()}
@@ -199,7 +199,7 @@ export default function Home() {
               className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
             />
           </Link>
-        </div> */}
+        </div>
 
         {/* Links */}
         <div className="flex flex-col gap-6">
