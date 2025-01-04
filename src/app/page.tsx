@@ -1,6 +1,24 @@
+import Link from "next/link"
 import Particles from "@/components/particles"
 import { ArrowUpRight, LucideBuilding, MapPinHouse } from "lucide-react"
-import Link from "next/link"
+import { getPosts } from "@/lib/blog"
+
+const posts = getPosts()
+  ?.sort(
+    (a, b) =>
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+  )
+  ?.slice(0, 4)
+
+function formatDate(dateString: string) {
+  return new Date(dateString)
+    ?.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    })
+    ?.toLowerCase()
+}
 
 export default function Home() {
   return (
@@ -149,10 +167,28 @@ export default function Home() {
         </div>
 
         {/* Blog */}
-        <div className="flex flex-col gap-6">
+        {/* <div className="flex flex-col gap-6">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Blog
           </h2>
+          <div className="space-y-4">
+            {posts?.map((post, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center group"
+              >
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-gray-200 hover:text-accent transition-colors duration-200"
+                >
+                  {post.metadata.title.toLowerCase()}
+                </Link>
+                <span className="text-sm text-gray-400">
+                  {formatDate(post.metadata.date)}
+                </span>
+              </div>
+            ))}
+          </div>
           <Link
             href={"/blogs"}
             className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
@@ -163,7 +199,7 @@ export default function Home() {
               className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
             />
           </Link>
-        </div>
+        </div> */}
 
         {/* Links */}
         <div className="flex flex-col gap-6">
