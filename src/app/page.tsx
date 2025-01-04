@@ -1,11 +1,12 @@
 import Particles from "@/components/particles"
-import { LucideBuilding, MapPinHouse } from "lucide-react"
+import { ArrowUpRight, LucideBuilding, MapPinHouse } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
   return (
     <div>
       <main className="flex flex-col gap-20">
+        {/* Intro */}
         <div className="flex flex-col gap-6">
           <h1 className="text-3xl font-bold">Aarush Tanwar</h1>
 
@@ -28,6 +29,7 @@ export default function Home() {
           </p>
         </div>
 
+        {/* Work */}
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
             Work
@@ -69,6 +71,128 @@ export default function Home() {
               complex frontends etc.
             </p>
           </Link>
+        </div>
+
+        {/* Projects */}
+        <div className="flex flex-col gap-6">
+          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
+            Projects
+          </h2>
+
+          <Link
+            href={"https://github.com/Thisisaarush/scalable-ecommerce-backend"}
+            target="_blank"
+            className="flex flex-col gap-2 group"
+          >
+            <span>
+              <h3 className="text-lg font-bold group-hover:text-accent">
+                Scalable E-Commerce Backend | 30+ ⭐ Stars on GitHub
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Tech Stack - Node.js, Express.js, MongoDB, Docker, Nginx,
+                Kubernetes, Stripe
+              </p>
+            </span>
+            <p>
+              Developed a scalable e-commerce backend with microservices,
+              ensuring reliability, fault tolerance, and efficient deployments.
+            </p>
+          </Link>
+          <Link
+            href={"https://github.com/Thisisaarush/url-shortening-service"}
+            className="flex flex-col gap-2 group"
+          >
+            <span>
+              <h3 className="text-lg font-bold group-hover:text-accent">
+                URL Shortening Service
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Tech Stack - Node.js, Express.js, Redis, Docker, MongoDB, Morgan
+              </p>
+            </span>
+            <p>
+              A URL shortening service with features including URL shortening,
+              redirection, updating, and deletion, along with caching using
+              Redis and rate limiting for performance optimization.
+            </p>
+          </Link>
+          <Link
+            href={"https://shoez-store.vercel.app/"}
+            className="flex flex-col gap-2 group"
+          >
+            <span>
+              <h3 className="text-lg font-bold group-hover:text-accent">
+                Shoez-Store
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Tech Stack - Typescript, React, Next.js, Tailwind CSS, Node.js,
+                Express.js, MongoDB, Zustand, GraphQL, Framer Motion, Prisma,
+                RazorPay
+              </p>
+            </span>
+            <p>
+              A full-stack e-commerce website with features like product
+              management, user authentication, cart management, and payment
+              gateway integration.
+            </p>
+          </Link>
+          <Link
+            href={"/projects"}
+            className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
+          >
+            <p>All Projects</p>
+            <ArrowUpRight
+              size={14}
+              className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
+            />
+          </Link>
+        </div>
+
+        {/* Blog */}
+        <div className="flex flex-col gap-6">
+          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
+            Blog
+          </h2>
+          <Link
+            href={"/blogs"}
+            className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
+          >
+            <p>All Blogs</p>
+            <ArrowUpRight
+              size={14}
+              className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
+            />
+          </Link>
+        </div>
+
+        {/* Links */}
+        <div className="flex flex-col gap-6">
+          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
+            Links
+          </h2>
+          <div className="flex items-center gap-4">
+            <Link
+              href={"https://www.github.com/thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              GitHub
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href={"https://x.com/Thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              Twitter
+            </Link>
+          </div>
         </div>
       </main>
       <Particles className="absolute inset-0 -z-50" quantity={150} />
