@@ -2,6 +2,7 @@ import Link from "next/link"
 import Particles from "@/components/particles"
 import { ArrowUpRight, LucideBuilding, MapPinHouse } from "lucide-react"
 import { getPosts } from "@/lib/blog"
+import Image from "next/image"
 
 const posts = getPosts()
   ?.sort(
@@ -26,16 +27,26 @@ export default function Home() {
       <main className="flex flex-col gap-20">
         {/* Intro */}
         <div className="flex flex-col gap-6">
-          <h1 className="text-3xl font-bold">Aarush Tanwar</h1>
-
-          <div className="flex flex-col gap-1">
-            <span className="flex items-center gap-2 text-gray-400">
-              <LucideBuilding size={16} />
-              <p>SDE3 @ Rightpoint (Genpact)</p>
-            </span>
-            <span className="flex items-center gap-2 text-gray-400">
-              <MapPinHouse size={16} />
-              <p>Jaipur, Rajasthan, India</p>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/profile_photo.jpg"
+              alt="Aarush Tanwar"
+              width={80}
+              height={80}
+              className="rounded-full"
+            />
+            <span className="flex flex-col gap-1">
+              <h1 className="text-3xl font-bold">Aarush Tanwar</h1>
+              <div className="flex flex-col gap-1 text-sm">
+                <span className="flex items-center gap-2 text-gray-400">
+                  <LucideBuilding size={16} />
+                  <p>SDE3 @ Rightpoint (Genpact)</p>
+                </span>
+                <span className="flex items-center gap-2 text-gray-400">
+                  <MapPinHouse size={16} />
+                  <p>Jaipur, Rajasthan, India</p>
+                </span>
+              </div>
             </span>
           </div>
 
@@ -45,7 +56,34 @@ export default function Home() {
             Typescript, React, Node.js, MongoDB, and PostgreSQL. In my free
             time, I like playing video games and do some photography.
           </p>
+
+          {/* Links */}
+          <div className="flex items-center gap-4 text-sm text-gray-400 underline underline-offset-4">
+            <Link
+              href={"https://www.github.com/thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              GitHub
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href={"https://x.com/Thisisaarush"}
+              target="_blank"
+              className="flex items-center gap-2 group hover:text-accent"
+            >
+              Twitter
+            </Link>
+          </div>
         </div>
+
+        <hr className="border-gray-700 -my-10 border-dashed" />
 
         {/* Work */}
         <div className="flex flex-col gap-8">
@@ -90,6 +128,8 @@ export default function Home() {
             </p>
           </Link>
         </div>
+
+        <hr className="border-gray-700 -my-10 border-dashed" />
 
         {/* Projects */}
         <div className="flex flex-col gap-8">
@@ -166,10 +206,12 @@ export default function Home() {
           </Link>
         </div>
 
+        <hr className="border-gray-700 -my-10 border-dashed" />
+
         {/* Blog */}
         <div className="flex flex-col gap-8">
           <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
-            Blog
+            Blogs
           </h2>
           <div className="space-y-4">
             {posts?.map((post, index) => (
@@ -199,36 +241,6 @@ export default function Home() {
               className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
             />
           </Link>
-        </div>
-
-        {/* Links */}
-        <div className="flex flex-col gap-8">
-          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
-            Links
-          </h2>
-          <div className="flex items-center gap-4">
-            <Link
-              href={"https://www.github.com/thisisaarush"}
-              target="_blank"
-              className="flex items-center gap-2 group hover:text-accent"
-            >
-              GitHub
-            </Link>
-            <Link
-              href={"https://www.linkedin.com/in/thisisaarush"}
-              target="_blank"
-              className="flex items-center gap-2 group hover:text-accent"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href={"https://x.com/Thisisaarush"}
-              target="_blank"
-              className="flex items-center gap-2 group hover:text-accent"
-            >
-              Twitter
-            </Link>
-          </div>
         </div>
       </main>
       <Particles className="absolute inset-0 -z-50" quantity={150} />
