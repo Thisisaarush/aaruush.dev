@@ -144,7 +144,7 @@ export default function Home() {
           >
             <span>
               <h3 className="text-lg font-bold group-hover:text-accent">
-                Scalable E-Commerce Backend | 30+ ⭐ Stars on GitHub
+                Scalable E-Commerce Backend | 40+ ⭐ Stars on GitHub
               </h3>
               <p className="text-gray-400 text-sm">
                 Tech Stack - Node.js, Express.js, MongoDB, Docker, Nginx,
