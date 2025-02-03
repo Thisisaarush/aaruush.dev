@@ -7,7 +7,7 @@ export const projectData = [
     achievements: [
       "Built a scalable e-commerce backend with microservices",
       "Ensured reliability, fault tolerance, and efficient deployments",
-      "30+ ⭐ Stars on GitHub",
+      "40+ ⭐ Stars on GitHub",
     ],
     technologies: [
       "Node.js",
