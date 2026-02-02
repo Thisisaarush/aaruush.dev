@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ArrowUpRight, Loader2, CheckCircle, AlertCircle } from "lucide-react"
+import { useCurrency } from "@/lib/currency-context"
 
 type FormStatus = "idle" | "submitting" | "success" | "error" | "duplicate"
 
@@ -9,6 +10,7 @@ export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle")
   const [email, setEmail] = useState("")
   const [submittedEmails, setSubmittedEmails] = useState<string[]>([])
+  const { formatPrice, loading: currencyLoading } = useCurrency()
 
   // Load submitted emails from localStorage on mount
   useEffect(() => {
@@ -168,10 +170,24 @@ export function ContactForm() {
           className="w-full px-4 py-3 bg-[#0a0a0a] border border-accent/20 text-white focus:border-accent focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <option value="">Select a range</option>
-          <option value="2000-5000">$2,000 - $5,000</option>
-          <option value="5000-10000">$5,000 - $10,000</option>
-          <option value="10000-25000">$10,000 - $25,000</option>
-          <option value="25000+">$25,000+</option>
+          <option value="500-1500">
+            {currencyLoading
+              ? "Loading..."
+              : `${formatPrice(500)} - ${formatPrice(1500)}`}
+          </option>
+          <option value="1500-4000">
+            {currencyLoading
+              ? "Loading..."
+              : `${formatPrice(1500)} - ${formatPrice(4000)}`}
+          </option>
+          <option value="4000-10000">
+            {currencyLoading
+              ? "Loading..."
+              : `${formatPrice(4000)} - ${formatPrice(10000)}`}
+          </option>
+          <option value="10000+">
+            {currencyLoading ? "Loading..." : `${formatPrice(10000)}+`}
+          </option>
         </select>
       </div>
 

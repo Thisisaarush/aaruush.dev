@@ -14,7 +14,7 @@ export const Navbar = () => {
         />
       </Link>
 
-      <div className="flex space-x-8">
+      <div className="flex space-x-6">
         <Link
           href="/services"
           className="hover:text-accent transition-colors duration-150"

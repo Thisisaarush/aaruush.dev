@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Navbar } from "@/components/navbar"
+import { CurrencyProvider } from "@/lib/currency-context"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +63,50 @@ export const metadata: Metadata = {
   },
 }
 
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.aaruush.dev/#website",
+      url: "https://www.aaruush.dev",
+      name: "Aarush Tanwar",
+      description: "Senior Full-Stack Developer Portfolio",
+      publisher: {
+        "@id": "https://www.aaruush.dev/#person",
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.aaruush.dev/#person",
+      name: "Aarush Tanwar",
+      url: "https://www.aaruush.dev",
+      image: "https://www.aaruush.dev/profile_photo.jpg",
+      jobTitle: "Senior Full-Stack Developer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Rightpoint (Genpact)",
+      },
+      sameAs: [
+        "https://github.com/thisisaarush",
+        "https://linkedin.com/in/thisisaarush",
+        "https://twitter.com/thisisaarush",
+      ],
+      knowsAbout: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "PostgreSQL",
+        "AI Integration",
+        "SaaS Development",
+      ],
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,13 +114,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <div className="max-w-5xl px-6 py-10 mx-auto">
-          <Navbar />
-          {children}
-        </div>
+        <CurrencyProvider>
+          <div className="max-w-5xl px-6 py-10 mx-auto">
+            <Navbar />
+            {children}
+          </div>
+        </CurrencyProvider>
 
         <Analytics />
         <SpeedInsights />

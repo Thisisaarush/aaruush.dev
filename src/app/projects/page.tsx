@@ -1,6 +1,13 @@
+import { Metadata } from "next"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { projectData as projects } from "@/lib/projectsData"
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Explore my portfolio of full-stack projects including AI-powered SaaS platforms, microservices architectures, and real-time applications.",
+}
 
 export default function ProjectsPage() {
   return (

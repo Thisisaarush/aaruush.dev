@@ -1,5 +1,12 @@
+import { Metadata } from "next"
 import { getPosts } from "@/lib/blog"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Technical articles, case studies, and insights on full-stack development, AI integration, and building scalable applications.",
+}
 
 const posts = getPosts().sort(
   (a, b) =>
