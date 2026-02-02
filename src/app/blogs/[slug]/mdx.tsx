@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc"
 import { Children, createElement, isValidElement } from "react"
@@ -48,8 +49,24 @@ function CustomLink({
   return <a href={href} target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-function CustomImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
-  return <img alt={props.alt} className="rounded-lg" {...props} />
+function CustomImage({
+  src,
+  alt,
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+  if (!src) return null
+
+  return (
+    <Image
+      src={src}
+      alt={alt || ""}
+      width={1200}
+      height={800}
+      className="rounded-lg w-full h-auto"
+      style={props.style}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+    />
+  )
 }
 
 async function Pre({
@@ -58,7 +75,7 @@ async function Pre({
 }: React.HtmlHTMLAttributes<HTMLPreElement>) {
   // Extract className from the children code tag
   const codeElement = Children.toArray(children).find(
-    (child) => isValidElement(child) && child.type === "code"
+    (child) => isValidElement(child) && child.type === "code",
   ) as React.ReactElement<HTMLPreElement> | undefined
 
   const className = codeElement?.props?.className ?? ""
@@ -110,7 +127,7 @@ function createHeading(level: number) {
           key: `link-${slug}`,
           className: "anchor",
         },
-        children
+        children,
       ),
     ])
   }
