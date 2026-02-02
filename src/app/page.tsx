@@ -7,7 +7,7 @@ import Image from "next/image"
 const posts = getPosts()
   ?.sort(
     (a, b) =>
-      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime(),
   )
   ?.slice(0, 4)
 
@@ -138,13 +138,34 @@ export default function Home() {
           </h2>
 
           <Link
+            href={"https://github.com/Thisisaarush/verto-ai"}
+            target="_blank"
+            className="flex flex-col gap-2 group"
+          >
+            <span>
+              <h3 className="text-lg font-bold group-hover:text-accent">
+                Verto AI – AI Customer Support SaaS
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Tech Stack - Next.js, Convex, Google Gemini, Tailwind CSS,
+                Shadcn UI, Clerk, Turborepo
+              </p>
+            </span>
+
+            <p>
+              Built a multi-tenant AI-powered customer support platform with
+              RAG-based knowledge retrieval, embeddable chat widget, and
+              real-time admin dashboard.
+            </p>
+          </Link>
+          <Link
             href={"https://github.com/Thisisaarush/scalable-ecommerce-backend"}
             target="_blank"
             className="flex flex-col gap-2 group"
           >
             <span>
               <h3 className="text-lg font-bold group-hover:text-accent">
-                Scalable E-Commerce Backend | 40+ ⭐ Stars on GitHub
+                Scalable E-Commerce Backend | 75+ ⭐ Stars on GitHub
               </h3>
               <p className="text-gray-400 text-sm">
                 Tech Stack - Node.js, Express.js, MongoDB, Docker, Nginx,

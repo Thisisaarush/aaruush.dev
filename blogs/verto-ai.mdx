@@ -1,0 +1,227 @@
+---
+title: "Verto AI - AI-Powered Customer Support SaaS (Case Study)"
+description: "A multi-tenant AI customer support platform with knowledge-base ingestion, embeddable chat widget, and human escalation."
+date: "2026-02-02"
+tags: ["Next.js", "AI", "SaaS", "RAG", "Convex", "Gemini"]
+---
+
+Verto AI is a modern AI-powered customer support platform that enables businesses to deploy an intelligent chatbot trained on their own knowledge base, manage customer conversations, and escalate complex queries to human agents.
+
+Built as a reusable SaaS starter kit for AI customer support systems.
+
+---
+
+## 🚩 Problem
+
+Customer support teams face:
+
+- High volume of repetitive questions
+- Slow response times
+- High operational costs
+- Limited automation
+
+Most businesses want AI chatbots, but existing solutions are either expensive, hard to customize, or lack deep knowledge-base integration.
+
+---
+
+## 🎯 Goal
+
+Build a platform where organizations can:
+
+- Upload their documents
+- Instantly deploy an AI chatbot
+- Answer customer questions accurately
+- Escalate complex cases to humans
+- Manage everything from a dashboard
+
+---
+
+## ✅ Solution
+
+I designed and built a multi-tenant AI-powered SaaS platform that provides:
+
+- AI chatbot using Google Gemini
+- RAG-based knowledge retrieval
+- Embeddable website chat widget
+- Admin dashboard for conversation management
+
+---
+
+## 🧱 Core Features
+
+### AI-Powered Chat
+
+- Google Gemini 2.5 powered responses
+- Context-aware conversations
+- Automatic human escalation
+
+### Knowledge Base
+
+- File upload
+- Document chunking
+- Embeddings storage
+- Semantic search
+
+### Customer Widget
+
+- Embeddable JavaScript snippet
+- Custom greetings & suggestions
+- Persistent sessions
+- Responsive UI
+
+### Admin Dashboard
+
+- Organization-based multi-tenancy
+- View / resolve / escalate conversations
+- Widget customization
+- File management
+
+---
+
+## 🏗 Architecture
+
+Monorepo using PNPM workspaces and Turborepo.
+
+### Applications
+
+- `apps/web` → Admin Dashboard
+- `apps/widget` → Chat Widget
+- `apps/embed` → Script Loader
+
+### Packages
+
+- `packages/backend` → Convex schema & AI logic
+- `packages/ui` → Shared components
+
+---
+
+## 🔧 Tech Stack
+
+**Frontend**
+
+- Next.js 15
+- Tailwind CSS
+- Shadcn UI
+- React Hook Form + Zod
+- Jotai
+
+**Backend**
+
+- Convex (DB + serverless)
+- Convex RAG
+- Convex Agent
+
+**AI**
+
+- Google Gemini 2.5
+
+**Auth**
+
+- Clerk
+
+**Monitoring**
+
+- Sentry
+
+---
+
+## 🔁 Data Flow
+
+1. Admin uploads documents
+2. Documents are chunked & embedded
+3. User sends message from widget
+4. Query searches embeddings
+5. Context injected into prompt
+6. Gemini generates answer
+7. Optional human escalation
+
+---
+
+## 🧩 Database Design
+
+- organizations
+- users
+- conversations
+- messages
+- knowledge_documents
+- embeddings
+- widget_config
+
+Each entity is scoped by organization.
+
+---
+
+## ⚙️ Key Technical Challenges
+
+### Multi-Tenancy
+
+Each organization must have isolated data and configuration.
+
+**Solution:**  
+All tables scoped by `organizationId`.
+
+---
+
+### Real-Time Messaging
+
+Need instant updates between widget and dashboard.
+
+**Solution:**  
+Convex real-time subscriptions.
+
+---
+
+### Accurate AI Responses
+
+LLMs hallucinate without context.
+
+**Solution:**  
+RAG pipeline with document embeddings.
+
+---
+
+### Embeddable Widget
+
+Should work on any site.
+
+**Solution:**  
+Script loader that injects iframe-based widget.
+
+---
+
+## 📈 Result
+
+- Fully functional SaaS MVP
+- Production-ready architecture
+- Reusable starter kit for client projects
+
+---
+
+## 💡 Learnings
+
+- Designing AI systems requires strong data pipelines
+- RAG dramatically improves accuracy
+- Monorepo architecture improves reuse
+
+---
+
+## 🔮 Future Improvements
+
+- Sentiment analysis
+- Multilingual support
+- Voice messages
+- CRM integrations
+
+---
+
+## 🔗 Links
+
+- [Live Demo](https://verto-ai-web.vercel.app/)
+- [GitHub](https://github.com/Thisisaarush/verto-ai)
+
+---
+
+## 👤 Author
+
+Aarush Tanwar  
+Senior Full Stack Engineer

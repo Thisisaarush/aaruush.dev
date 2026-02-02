@@ -1,5 +1,30 @@
 export const projectData = [
   {
+    title: "Verto AI - AI Customer Support SaaS",
+    description:
+      "Multi-tenant AI-powered customer support platform with RAG, embeddable chat widget, and admin dashboard.",
+    role: "Creator & Maintainer",
+    period: "2025 - Present",
+    achievements: [
+      "Built an end-to-end AI-powered customer support SaaS platform",
+      "Implemented RAG pipeline for accurate knowledge-based responses",
+      "Designed embeddable chat widget with real-time messaging",
+      "Developed multi-tenant admin dashboard for managing conversations",
+    ],
+    technologies: [
+      "Next.js",
+      "Convex",
+      "Google Gemini",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Clerk",
+      "Jotai",
+      "Turborepo",
+      "PNPM",
+    ],
+    href: "https://github.com/Thisisaarush/verto-ai",
+  },
+  {
     title: "Scalable E-Commerce Backend",
     description: "Microservices based scalable e-commerce backend.",
     role: "Creator & Maintainer",
@@ -7,7 +32,7 @@ export const projectData = [
     achievements: [
       "Built a scalable e-commerce backend with microservices",
       "Ensured reliability, fault tolerance, and efficient deployments",
-      "40+ ⭐ Stars on GitHub",
+      "75+ ⭐ Stars on GitHub",
     ],
     technologies: [
       "Node.js",
