@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const posts = getPosts().sort(
   (a, b) =>
-    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime(),
 )
 
 export default async function BlogPage() {
@@ -20,7 +20,7 @@ export default async function BlogPage() {
             href={`/blogs/${post.slug}`}
             className="flex items-start justify-between gap-2 group"
           >
-            <span>
+            <span className="max-w-[80%]">
               <p className="text-lg font-bold group-hover:text-accent">
                 {post.metadata.title}
               </p>

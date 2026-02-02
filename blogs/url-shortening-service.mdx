@@ -1,0 +1,224 @@
+---
+title: "URL Shortening Service (Case Study)"
+description: "A high-performance URL shortening service with Redis caching, rate limiting, and full CRUD operations."
+date: "2024-09-28"
+tags: ["Node.js", "Express.js", "Redis", "Docker", "MongoDB", "Morgan"]
+---
+
+A URL shortening service with complete CRUD operations, Redis caching for performance, and rate limiting for protection against abuse.
+
+### Example Usage
+
+```
+Original URL: https://unsplash.com/photos/a-bull-with-large-horns-eating-grass-in-a-field-0XKM4QW5WUg
+Shortened URL: http://localhost:5000/M2v33V
+```
+
+---
+
+## 🚩 Problem
+
+Long URLs are:
+
+- Hard to share on social media
+- Difficult to remember
+- Ugly in print materials
+- Not trackable
+
+Existing solutions often lack:
+
+- Full URL management capabilities
+- Performance optimization
+- Abuse protection
+
+---
+
+## 🎯 Goal
+
+Build a URL shortening service that:
+
+- Generates short, memorable URLs
+- Redirects quickly with low latency
+- Allows full URL management (CRUD)
+- Handles high traffic efficiently
+- Protects against abuse
+
+---
+
+## ✅ Solution
+
+I built a performant URL shortening service featuring:
+
+- Fast URL shortening and redirection
+- Redis caching for quick lookups
+- Rate limiting for abuse prevention
+- Full CRUD operations
+- Containerized deployment
+
+---
+
+## 🧱 Core Features
+
+### URL Operations
+
+- **Shorten URL** - Transform long URLs into short, shareable links
+- **Redirect** - Seamlessly redirect to original URL
+- **Update** - Modify the original URL for existing short links
+- **Delete** - Remove short URLs when no longer needed
+- **Get Original** - Retrieve the original URL from a short link
+
+### Performance & Security
+
+- **Redis Caching** - Fast lookups for frequently accessed URLs
+- **Rate Limiting** - Protect against abuse and spam
+- **Request Logging** - Morgan for comprehensive request logs
+
+### Infrastructure
+
+- **Docker & Docker Compose** - Easy containerized deployment
+- **MongoDB** - Persistent URL storage
+- **Redis** - High-speed caching layer
+
+---
+
+## 🏗 Architecture
+
+```
+┌─────────────┐
+│   Client    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  Express.js │
+│   Server    │
+└──────┬──────┘
+       │
+   ┌───┴───┐
+   ▼       ▼
+┌──────┐ ┌───────┐
+│Redis │ │MongoDB│
+│Cache │ │  DB   │
+└──────┘ └───────┘
+```
+
+---
+
+## 🔧 Tech Stack
+
+**Runtime & Framework**
+
+- Node.js
+- Express.js
+
+**Database**
+
+- MongoDB (persistent storage)
+- Redis (caching layer)
+
+**Monitoring**
+
+- Morgan (request logging)
+
+**Infrastructure**
+
+- Docker
+
+---
+
+## 🔁 Data Flow
+
+### Shortening Flow
+
+1. User submits long URL
+2. Generate unique short code
+3. Store in MongoDB
+4. Cache in Redis
+5. Return short URL
+
+### Redirect Flow
+
+1. User visits short URL
+2. Check Redis cache
+3. If miss, query MongoDB
+4. Update cache
+5. Redirect to long URL
+
+---
+
+## ⚙️ Key Technical Challenges
+
+### Unique Code Generation
+
+Need short, unique, URL-safe codes.
+
+**Solution:**  
+Base62 encoding with collision detection and retry logic.
+
+---
+
+### Low Latency Redirects
+
+Redirects must be fast for good UX.
+
+**Solution:**  
+Redis caching with cache-aside pattern.
+
+---
+
+### Abuse Prevention
+
+Service vulnerable to spam and abuse.
+
+**Solution:**  
+IP-based rate limiting with configurable thresholds.
+
+---
+
+### Cache Consistency
+
+Cache must stay in sync with database.
+
+**Solution:**  
+Write-through caching with TTL-based expiration.
+
+---
+
+## 📈 Result
+
+- Sub-10ms redirect latency (cached)
+- Handles thousands of requests/second
+- Full CRUD API
+- Production-ready containerization
+
+---
+
+## 💡 Learnings
+
+- Redis dramatically improves read performance
+- Rate limiting is essential for public APIs
+- Base62 provides good balance of length and uniqueness
+- Docker simplifies development and deployment
+
+---
+
+## 🔮 Future Improvements
+
+- Click analytics and tracking
+- Custom domains
+- QR code generation
+- Link expiration
+- User authentication
+
+---
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/Thisisaarush/url-shortening-service)
+
+---
+
+## 👤 Author
+
+Aarush Tanwar  
+Senior Full Stack Engineer
