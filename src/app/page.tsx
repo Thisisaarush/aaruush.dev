@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Particles from "@/components/particles"
-import { ArrowUpRight, LucideBuilding, MapPinHouse } from "lucide-react"
+import { ArrowUpRight, LucideBuilding, MapPinHouse, Circle } from "lucide-react"
 import { getPosts } from "@/lib/blog"
 import Image from "next/image"
 
@@ -51,11 +51,25 @@ export default function Home() {
           </div>
 
           <p>
-            I&apos;m a software engineer with over 5 years of experience who
-            loves building scalable and efficient web apps. I mostly work with
-            Typescript, React, Node.js, MongoDB, and PostgreSQL. In my free
-            time, I like playing video games and do some photography.
+            I help startups and businesses build{" "}
+            <span className="text-accent font-medium">
+              scalable web applications
+            </span>{" "}
+            that drive growth. With 6+ years shipping production systems, I
+            specialize in turning ideas into reliable, performant products using
+            React, Next.js, Node.js, and AI integrations.
           </p>
+
+          {/* Availability Status */}
+          <div className="flex items-center gap-2 text-sm">
+            <Circle
+              size={8}
+              className="fill-green-500 text-green-500 animate-pulse"
+            />
+            <span className="text-green-500 font-medium">
+              Available for freelance projects
+            </span>
+          </div>
 
           {/* Links */}
           <div className="flex items-center gap-4 text-sm text-gray-400 underline underline-offset-4">

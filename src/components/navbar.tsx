@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -16,6 +16,12 @@ export const Navbar = () => {
 
       <div className="flex space-x-8">
         <Link
+          href="/services"
+          className="hover:text-accent transition-colors duration-150"
+        >
+          Services
+        </Link>
+        <Link
           href="/projects"
           className="hover:text-accent transition-colors duration-150"
         >
@@ -29,11 +35,11 @@ export const Navbar = () => {
           Blogs
         </Link>
         <Link
-          href="mailto:tanwaraarush007@gmail.com"
+          href="/contact"
           className="text-accent transition-colors duration-150 hover:underline hover:underline-offset-4 flex items-center gap-2 group"
         >
           <p>Contact</p>
-          <ExternalLink
+          <ArrowUpRight
             size={14}
             className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
           />

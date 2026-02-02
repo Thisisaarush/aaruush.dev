@@ -19,18 +19,34 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aaruush.dev"),
   title: {
-    default: "Aarush Tanwar",
+    default: "Aarush Tanwar | Senior Full-Stack Developer",
     template: "%s | Aarush Tanwar",
   },
-  description: "Aarush Tanwar - Developer",
+  description:
+    "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 6+ years building scalable SaaS products. Available for freelance projects.",
+  keywords: [
+    "Full-Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "Freelance Developer",
+    "AI Integration",
+    "SaaS Development",
+    "Web Application Development",
+  ],
+  authors: [{ name: "Aarush Tanwar", url: "https://www.aaruush.dev" }],
+  creator: "Aarush Tanwar",
   twitter: {
-    title: "Aarush Tanwar",
+    title: "Aarush Tanwar | Senior Full-Stack Developer",
     card: "summary_large_image",
     creator: "@thisisaarush",
+    description:
+      "Senior Full-Stack Developer specializing in React, Next.js, and AI-powered applications. Available for freelance projects.",
   },
   openGraph: {
-    title: "Aarush Tanwar",
-    description: "Developer Portfolio",
+    title: "Aarush Tanwar | Senior Full-Stack Developer",
+    description:
+      "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 6+ years building scalable SaaS products.",
     url: "https://www.aaruush.dev",
     siteName: "Aarush Tanwar",
     locale: "en_US",
