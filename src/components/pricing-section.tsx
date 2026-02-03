@@ -42,8 +42,14 @@ const pricingTiers = [
 ]
 
 export function PricingSection() {
-  const { currency, countryCode, loading, formatPrice, resetToUSD } =
-    useCurrency()
+  const {
+    currency,
+    loading,
+    formatPrice,
+    toggleCurrency,
+    isShowingUSD,
+    countryCode,
+  } = useCurrency()
 
   return (
     <div>
@@ -55,10 +61,10 @@ export function PricingSection() {
           <span className="text-xs text-gray-500">
             Prices in {currency.code} •{" "}
             <button
-              onClick={resetToUSD}
+              onClick={toggleCurrency}
               className="text-accent hover:underline"
             >
-              Show in USD
+              {isShowingUSD ? "Show in local" : "Show in USD"}
             </button>
           </span>
         )}

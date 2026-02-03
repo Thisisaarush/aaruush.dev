@@ -50,7 +50,8 @@ interface CurrencyContextType {
   setCountryCode: (code: string) => void
   loading: boolean
   formatPrice: (usdAmount: number) => string
-  resetToUSD: () => void
+  toggleCurrency: () => void
+  isShowingUSD: boolean
 }
 
 const CurrencyContext = createContext<CurrencyContextType | undefined>(
@@ -85,6 +86,11 @@ export function formatPriceValue(
 export function CurrencyProvider({ children }: { children: ReactNode }) {
   const [currency, setCurrency] = useState<Currency>(exchangeRates.US)
   const [countryCode, setCountryCode] = useState("US")
+  const [originalCurrency, setOriginalCurrency] = useState<Currency>(
+    exchangeRates.US,
+  )
+  const [originalCountryCode, setOriginalCountryCode] = useState("US")
+  const [isShowingUSD, setIsShowingUSD] = useState(false)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -98,6 +104,8 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         if (data.country_code && exchangeRates[data.country_code]) {
           setCurrency(exchangeRates[data.country_code])
           setCountryCode(data.country_code)
+          setOriginalCurrency(exchangeRates[data.country_code])
+          setOriginalCountryCode(data.country_code)
         }
       } catch {
         console.log("Country detection failed, using USD")
@@ -114,9 +122,18 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     return formatPriceValue(convertedPrice, currency.symbol, currency.code)
   }
 
-  const resetToUSD = () => {
-    setCurrency(exchangeRates.US)
-    setCountryCode("US")
+  const toggleCurrency = () => {
+    if (isShowingUSD) {
+      // Switch back to local currency
+      setCurrency(originalCurrency)
+      setCountryCode(originalCountryCode)
+      setIsShowingUSD(false)
+    } else {
+      // Switch to USD
+      setCurrency(exchangeRates.US)
+      setCountryCode("US")
+      setIsShowingUSD(true)
+    }
   }
 
   return (
@@ -128,7 +145,8 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         setCountryCode,
         loading,
         formatPrice,
-        resetToUSD,
+        toggleCurrency,
+        isShowingUSD,
       }}
     >
       {children}

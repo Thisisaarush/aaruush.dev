@@ -162,6 +162,25 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* GitHub Contribution Graph */}
+          <div className="mt-2">
+            <p className="text-accent text-xs font-medium mb-3">
+              GITHUB ACTIVITY
+            </p>
+            <Link
+              href="https://github.com/thisisaarush"
+              target="_blank"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://ghchart.rshah.org/00EAFF/thisisaarush"
+                alt="GitHub Contribution Graph"
+                className="w-full max-w-5xl"
+              />
+            </Link>
+          </div>
         </div>
 
         <hr className="border-gray-700 -my-10 border-dashed" />
