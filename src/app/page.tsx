@@ -3,6 +3,7 @@ import Particles from "@/components/particles"
 import { ArrowUpRight, LucideBuilding, MapPinHouse, Circle } from "lucide-react"
 import { getPosts } from "@/lib/blog"
 import Image from "next/image"
+import { FeaturedProjects } from "@/components/featured-projects"
 
 const posts = getPosts()
   ?.sort(
@@ -334,84 +335,7 @@ export default function Home() {
             Projects
           </h2>
 
-          <Link
-            href={"https://github.com/Thisisaarush/verto-ai"}
-            target="_blank"
-            className="flex flex-col gap-2 group"
-          >
-            <span>
-              <h3 className="text-lg font-bold group-hover:text-accent">
-                Verto AI – AI Customer Support SaaS
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Tech Stack - Next.js, Convex, Google Gemini, Tailwind CSS,
-                Shadcn UI, Clerk, Turborepo
-              </p>
-            </span>
-
-            <p>
-              Built a multi-tenant AI-powered customer support platform with
-              RAG-based knowledge retrieval, embeddable chat widget, and
-              real-time admin dashboard.
-            </p>
-          </Link>
-          <Link
-            href={"https://github.com/Thisisaarush/scalable-ecommerce-backend"}
-            target="_blank"
-            className="flex flex-col gap-2 group"
-          >
-            <span>
-              <h3 className="text-lg font-bold group-hover:text-accent">
-                Scalable E-Commerce Backend | 75+ ⭐ Stars on GitHub
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Tech Stack - Node.js, Express.js, MongoDB, Docker, Nginx,
-                Kubernetes, Stripe
-              </p>
-            </span>
-            <p>
-              Developed a scalable e-commerce backend with microservices,
-              ensuring reliability, fault tolerance, and efficient deployments.
-            </p>
-          </Link>
-          <Link
-            href={"https://github.com/Thisisaarush/url-shortening-service"}
-            className="flex flex-col gap-2 group"
-          >
-            <span>
-              <h3 className="text-lg font-bold group-hover:text-accent">
-                URL Shortening Service
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Tech Stack - Node.js, Express.js, Redis, Docker, MongoDB, Morgan
-              </p>
-            </span>
-            <p>
-              A URL shortening service with features including URL shortening,
-              redirection, updating, and deletion, along with caching using
-              Redis and rate limiting for performance optimization.
-            </p>
-          </Link>
-          <Link
-            href={"https://shoez-store.vercel.app/"}
-            className="flex flex-col gap-2 group"
-          >
-            <span>
-              <h3 className="text-lg font-bold group-hover:text-accent">
-                Shoez-Store
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Tech Stack - Typescript, React, Next.js, Tailwind CSS, Node.js,
-                Express.js, MongoDB, Zustand, GraphQL, Framer Motion, Prisma,
-                RazorPay
-              </p>
-            </span>
-            <p>
-              A full-stack e-commerce website with features like product
-              management, user authentication, cart management, and payment
-              gateway integration.
-            </p>
-          </Link>
+          <FeaturedProjects />
           <Link
             href={"/projects"}
             className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
