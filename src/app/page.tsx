@@ -56,9 +56,10 @@ export default function Home() {
             <span className="text-accent font-medium">
               scalable web applications
             </span>{" "}
-            that drive growth. With 6+ years shipping production systems, I
-            specialize in turning ideas into reliable, performant products using
-            React, Next.js, Node.js, and AI integrations.
+            that drive growth. With 6+ years and 50+ projects shipped, I&apos;ve
+            helped clients generate $2M+ in revenue. I specialize in turning
+            ideas into reliable, performant products using React, Next.js,
+            Node.js, and AI integrations.
           </p>
 
           {/* Availability Status */}
@@ -118,14 +119,15 @@ export default function Home() {
           {/* Trust Signals */}
           <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
-              ⚡ Typical response: under 24 hours
+              🚀 50+ projects delivered
             </span>
             <span className="flex items-center gap-1">
-              🌏 Timezone: IST (UTC+5:30)
+              💰 $2M+ client revenue generated
             </span>
             <span className="flex items-center gap-1">
-              💯 100% Job Success Rate
+              ⚡ Response: under 24 hours
             </span>
+            <span className="flex items-center gap-1">🌏 IST (UTC+5:30)</span>
           </div>
         </div>
 
@@ -325,6 +327,115 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        <hr className="border-gray-700 -my-10 border-dashed" />
+
+        {/* How I Work */}
+        <div className="flex flex-col gap-8">
+          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
+            How I Work
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="text-center p-4">
+              <span className="text-3xl font-bold text-accent/30">01</span>
+              <h3 className="text-white font-bold mt-2">Discovery</h3>
+              <p className="text-gray-400 text-xs mt-1">
+                Understand your goals, users, and constraints
+              </p>
+            </div>
+            <div className="text-center p-4">
+              <span className="text-3xl font-bold text-accent/30">02</span>
+              <h3 className="text-white font-bold mt-2">Proposal</h3>
+              <p className="text-gray-400 text-xs mt-1">
+                Clear scope, timeline, and pricing—no surprises
+              </p>
+            </div>
+            <div className="text-center p-4">
+              <span className="text-3xl font-bold text-accent/30">03</span>
+              <h3 className="text-white font-bold mt-2">Development</h3>
+              <p className="text-gray-400 text-xs mt-1">
+                Weekly updates and demos as we build
+              </p>
+            </div>
+            <div className="text-center p-4">
+              <span className="text-3xl font-bold text-accent/30">04</span>
+              <h3 className="text-white font-bold mt-2">Launch</h3>
+              <p className="text-gray-400 text-xs mt-1">
+                Smooth deployment + ongoing support
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/services"
+            className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
+          >
+            <p>View Full Services & Pricing</p>
+            <ArrowUpRight
+              size={14}
+              className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
+            />
+          </Link>
+        </div>
+
+        <hr className="border-gray-700 -my-10 border-dashed" />
+
+        {/* Case Studies */}
+        <div className="flex flex-col gap-8">
+          <h2 className="text-2xl font-bold underline underline-offset-4 decoration-accent decoration-wavy">
+            Case Studies
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/case-studies"
+              className="border border-accent/10 p-5 hover:border-accent/40 hover:bg-accent/5 transition-colors group"
+            >
+              <span className="text-accent text-xs font-medium">RETAIL</span>
+              <h3 className="text-white font-bold mt-1 group-hover:text-accent transition-colors">
+                E-Commerce Modernization
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">Page load: 8s → 2s</p>
+              <p className="text-green-400 text-xs mt-1">
+                +180% Black Friday revenue
+              </p>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border border-accent/10 p-5 hover:border-accent/40 hover:bg-accent/5 transition-colors group"
+            >
+              <span className="text-accent text-xs font-medium">B2B SAAS</span>
+              <h3 className="text-white font-bold mt-1 group-hover:text-accent transition-colors">
+                Digital Ordering Platform
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">Order errors: -96%</p>
+              <p className="text-green-400 text-xs mt-1">38 hrs/week saved</p>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border border-accent/10 p-5 hover:border-accent/40 hover:bg-accent/5 transition-colors group"
+            >
+              <span className="text-accent text-xs font-medium">AI / SAAS</span>
+              <h3 className="text-white font-bold mt-1 group-hover:text-accent transition-colors">
+                AI Customer Support
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">
+                94% response accuracy
+              </p>
+              <p className="text-green-400 text-xs mt-1">
+                60% ticket reduction
+              </p>
+            </Link>
+          </div>
+          <Link
+            href="/case-studies"
+            className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
+          >
+            <p>View All Case Studies</p>
+            <ArrowUpRight
+              size={14}
+              className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
+            />
+          </Link>
         </div>
 
         <hr className="border-gray-700 -my-10 border-dashed" />
