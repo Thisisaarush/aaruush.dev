@@ -4,7 +4,7 @@ export const projectData = [
     description:
       "Multi-tenant AI-powered customer support platform with RAG, embeddable chat widget, and admin dashboard.",
     role: "Creator & Maintainer",
-    period: "2025 - Present",
+    period: "",
     achievements: [
       "Built an end-to-end AI-powered customer support SaaS platform",
       "Implemented RAG pipeline for accurate knowledge-based responses",

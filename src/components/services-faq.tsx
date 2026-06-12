@@ -1,26 +1,19 @@
-"use client"
-
-import { useCurrency } from "@/lib/currency-context"
-
 export function ServicesFAQ() {
-  const { formatPrice, loading } = useCurrency()
-
   const faqs = [
     {
       question: "What's your availability?",
       answer:
-        "I typically take on 1-2 projects at a time to ensure quality. My current availability is within 2 weeks for new projects.",
+        "I'm currently prioritizing senior full-time engineering roles. I also take on selective remote consulting engagements when there's strong technical alignment.",
     },
     {
-      question: "Do you work with startups?",
+      question: "What teams do you work best with?",
       answer:
-        "Absolutely! I love working with startups. I can help with MVPs, technical architecture, and scaling as you grow.",
+        "Product-focused startups and established teams building modern web products, SaaS platforms, and AI-enabled features.",
     },
     {
-      question: "What about ongoing support?",
-      answer: loading
-        ? "I offer maintenance packages starting at .../month for bug fixes, updates, and small improvements."
-        : `I offer maintenance packages starting at ${formatPrice(500)}/month for bug fixes, updates, and small improvements.`,
+      question: "Do you support short-term consulting?",
+      answer:
+        "Yes. I support targeted consulting for architecture reviews, high-impact feature delivery, and performance or reliability improvements.",
     },
     {
       question: "Do you sign NDAs?",

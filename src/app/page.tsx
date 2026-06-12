@@ -75,7 +75,7 @@ export default function Home() {
               href={"/contact"}
               className="flex items-center gap-2 bg-accent text-black font-medium px-4 py-2 hover:bg-accent/90 transition-colors"
             >
-              Hire Me
+              Discuss Full-Time Role
               <ArrowUpRight size={14} />
             </Link>
             <Link
@@ -208,18 +208,17 @@ export default function Home() {
           <Link href={"/services"} className="flex flex-col gap-2 group">
             <span>
               <h3 className="text-lg font-bold group-hover:text-accent">
-                Freelance
+                Independent Consulting (Remote)
               </h3>
               <p className="text-gray-400 text-sm">
                 Full Stack Developer (September 2019 - December 2021)
               </p>
             </span>
             <p>
-              Delivered 15+ projects for startups and SMBs across e-commerce,
-              fintech, and social platforms. Built custom solutions that
-              processed $500K+ in transactions. Specialized in Stripe/Razorpay
-              integrations, microservices architecture, and performance
-              optimization.
+              Delivered product and platform builds for startups and SMBs across
+              e-commerce, fintech, and social platforms. Specialized in payments
+              integrations, microservices architecture, and performance-focused
+              delivery.
             </p>
           </Link>
         </div>
@@ -315,9 +314,9 @@ export default function Home() {
             </div>
             <div className="text-center p-4">
               <span className="text-3xl font-bold text-accent/30">02</span>
-              <h3 className="text-white font-bold mt-2">Proposal</h3>
+              <h3 className="text-white font-bold mt-2">Alignment</h3>
               <p className="text-gray-400 text-xs mt-1">
-                Clear scope, timeline, and pricing—no surprises
+                Clarify role scope, team expectations, and impact goals
               </p>
             </div>
             <div className="text-center p-4">
@@ -339,7 +338,7 @@ export default function Home() {
             href="/services"
             className="flex items-center gap-2 group text-accent hover:underline hover:underline-offset-4 w-fit"
           >
-            <p>View Full Services & Pricing</p>
+            <p>View Expertise & Engagement</p>
             <ArrowUpRight
               size={14}
               className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-150"
@@ -467,19 +466,19 @@ export default function Home() {
         {/* CTA Section */}
         <div className="border border-accent/30 bg-accent/5 p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
-            Let&apos;s Build Something Great
+            Building Product Teams & Product Outcomes
           </h2>
           <p className="text-gray-400 mb-6 max-w-lg mx-auto">
-            Have a project in mind? I&apos;m available for freelance work and
-            always excited to tackle new challenges. Let&apos;s talk about your
-            ideas.
+            I&apos;m actively exploring senior full-time product engineering
+            roles. I also support select remote freelance engagements where I
+            can add immediate technical leadership.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-accent text-black font-bold px-6 py-3 hover:bg-accent/90 transition-colors group"
             >
-              Start a Conversation
+              Discuss Full-Time Opportunities
               <ArrowUpRight
                 size={16}
                 className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
@@ -489,7 +488,7 @@ export default function Home() {
               href="/services"
               className="inline-flex items-center gap-2 border border-accent/50 text-accent font-medium px-6 py-3 hover:bg-accent/10 transition-colors"
             >
-              View Services & Pricing
+              Explore Consulting Options
             </Link>
           </div>
         </div>

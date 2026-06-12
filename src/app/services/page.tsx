@@ -14,9 +14,9 @@ import { PricingSection } from "@/components/pricing-section"
 import { ServicesFAQ } from "@/components/services-faq"
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Expertise & Engagement",
   description:
-    "Full-stack development services including web applications, AI integration, API development, and SaaS products. Let's build something great together.",
+    "Senior full-stack engineering expertise across product development, platform architecture, and AI integration. Open to full-time roles and selective remote consulting.",
 }
 
 // FAQ Schema for SEO
@@ -29,23 +29,23 @@ const faqSchema = {
       name: "What's your availability?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "I typically take on 1-2 projects at a time to ensure quality. My current availability is within 2 weeks for new projects.",
+        text: "I am actively open to senior full-time product engineering roles. I also take on selective remote consulting engagements when the scope is a strong fit.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you work with startups?",
+      name: "What types of teams do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely! I love working with startups. I can help with MVPs, technical architecture, and scaling as you grow.",
+        text: "I work best with product-focused teams in growth-stage startups and established companies building web platforms, SaaS products, and AI-enabled experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "What about ongoing support?",
+      name: "Do you support consulting engagements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "I offer maintenance packages starting at $500/month for bug fixes, updates, and small improvements.",
+        text: "Yes. For remote consulting, I support architecture reviews, feature delivery, and platform modernization with clear scope and execution plans.",
       },
     },
     {
@@ -107,27 +107,27 @@ const services = [
 const process = [
   {
     step: "01",
-    title: "Discovery",
+    title: "Role Context",
     description:
-      "We discuss your project requirements, goals, timeline, and budget. I'll ask questions to understand your vision.",
+      "Understand team setup, product stage, and the outcomes the role is expected to drive.",
   },
   {
     step: "02",
-    title: "Proposal",
+    title: "Technical Alignment",
     description:
-      "I'll send a detailed proposal with scope, timeline, milestones, and pricing. No surprises later.",
+      "Align on architecture approach, ownership boundaries, execution style, and collaboration model.",
   },
   {
     step: "03",
-    title: "Development",
+    title: "Execution",
     description:
-      "Regular updates and demos as we build. You'll have visibility into progress at every stage.",
+      "Drive delivery with strong engineering fundamentals, clear communication, and measurable product progress.",
   },
   {
     step: "04",
-    title: "Launch & Support",
+    title: "Scale & Improve",
     description:
-      "Smooth deployment to production. I offer ongoing support and maintenance packages.",
+      "Stabilize systems, mentor teams, and improve quality, performance, and developer velocity over time.",
   },
 ]
 
@@ -140,13 +140,13 @@ export default function ServicesPage() {
       />
       <main className="animate-fade-in-up">
         <h1 className="text-4xl font-bold mb-4 text-white underline underline-offset-4 decoration-accent decoration-wavy">
-          Services
+          Expertise & Engagement
         </h1>
 
         <p className="text-gray-400 mb-12 leading-relaxed max-w-2xl">
-          I help startups and businesses build software that scales. Whether
-          you&apos;re launching an MVP or improving an existing product, I can
-          help you ship faster.
+          I build and scale product systems across frontend, backend, and AI
+          layers. I&apos;m prioritizing senior full-time engineering roles,
+          while remaining available for select remote consulting work.
         </p>
 
         {/* Services Grid */}
@@ -194,7 +194,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Pricing */}
+        {/* Engagement */}
         <PricingSection />
 
         {/* FAQ */}
@@ -208,17 +208,17 @@ export default function ServicesPage() {
         <div className="border border-accent/40 bg-accent/5 p-8 text-center">
           <MessageSquare className="w-12 h-12 text-accent mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-2">
-            Ready to start your project?
+            Looking for a senior engineer who can ship and scale?
           </h2>
           <p className="text-gray-400 mb-6 max-w-md mx-auto">
-            Let&apos;s discuss your requirements and see if we&apos;re a good
-            fit. No commitment required.
+            Let&apos;s discuss your full-time role or remote consulting need and
+            evaluate fit across impact, ownership, and execution.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-accent text-black font-bold px-6 py-3 hover:bg-accent/90 transition-colors group"
           >
-            Get in Touch
+            Start the Conversation
             <ArrowUpRight
               size={16}
               className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { ArrowUpRight, Loader2, CheckCircle, AlertCircle } from "lucide-react"
-import { useCurrency } from "@/lib/currency-context"
 
 type FormStatus = "idle" | "submitting" | "success" | "error" | "duplicate"
 
@@ -10,7 +9,6 @@ export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle")
   const [email, setEmail] = useState("")
   const [submittedEmails, setSubmittedEmails] = useState<string[]>([])
-  const { formatPrice, loading: currencyLoading } = useCurrency()
 
   // Load submitted emails from localStorage on mount
   useEffect(() => {
@@ -161,7 +159,7 @@ export function ContactForm() {
           htmlFor="budget"
           className="block text-sm font-medium text-white mb-2"
         >
-          Budget Range
+          Opportunity Type
         </label>
         <select
           id="budget"
@@ -169,25 +167,11 @@ export function ContactForm() {
           disabled={status === "submitting"}
           className="w-full px-4 py-3 bg-[#0a0a0a] border border-accent/20 text-white focus:border-accent focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <option value="">Select a range</option>
-          <option value="500-1500">
-            {currencyLoading
-              ? "Loading..."
-              : `${formatPrice(500)} - ${formatPrice(1500)}`}
-          </option>
-          <option value="1500-4000">
-            {currencyLoading
-              ? "Loading..."
-              : `${formatPrice(1500)} - ${formatPrice(4000)}`}
-          </option>
-          <option value="4000-10000">
-            {currencyLoading
-              ? "Loading..."
-              : `${formatPrice(4000)} - ${formatPrice(10000)}`}
-          </option>
-          <option value="10000+">
-            {currencyLoading ? "Loading..." : `${formatPrice(10000)}+`}
-          </option>
+          <option value="">Select opportunity type</option>
+          <option value="full-time">Full-time role</option>
+          <option value="contract-to-hire">Contract-to-hire</option>
+          <option value="consulting">Remote consulting engagement</option>
+          <option value="technical-advisory">Technical advisory</option>
         </select>
       </div>
 
@@ -196,7 +180,7 @@ export function ContactForm() {
           htmlFor="timeline"
           className="block text-sm font-medium text-white mb-2"
         >
-          Timeline
+          Start Window
         </label>
         <select
           id="timeline"
@@ -204,7 +188,7 @@ export function ContactForm() {
           disabled={status === "submitting"}
           className="w-full px-4 py-3 bg-[#0a0a0a] border border-accent/20 text-white focus:border-accent focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <option value="">Select timeline</option>
+          <option value="">Select start window</option>
           <option value="asap">ASAP</option>
           <option value="1-2-weeks">1-2 weeks</option>
           <option value="1-month">Within a month</option>
@@ -217,7 +201,7 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-white mb-2"
         >
-          Project Details
+          Role / Project Details
         </label>
         <textarea
           id="message"
@@ -226,7 +210,7 @@ export function ContactForm() {
           required
           disabled={status === "submitting"}
           className="w-full px-4 py-3 bg-transparent border border-accent/20 text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-          placeholder="Tell me about your project, goals, and any specific requirements..."
+          placeholder="Share team context, role expectations, product goals, and any specific requirements..."
         />
       </div>
 

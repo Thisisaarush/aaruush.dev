@@ -20,17 +20,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aaruush.dev"),
   title: {
-    default: "Aarush Tanwar | Senior Full-Stack Developer",
+    default: "Aarush Tanwar | Senior Full-Stack Engineer",
     template: "%s | Aarush Tanwar",
   },
   description:
-    "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 5+ years building scalable SaaS products. Available for freelance projects.",
+    "Senior Full-Stack Engineer specializing in React, Next.js, Node.js, and AI-powered applications. Open to full-time product engineering roles, with selective remote freelance engagements.",
   keywords: [
-    "Full-Stack Developer",
+    "Senior Full-Stack Engineer",
+    "Software Engineer",
+    "Full-Time Engineering Roles",
     "React Developer",
     "Next.js Developer",
     "Node.js Developer",
-    "Freelance Developer",
+    "Remote Engineer",
+    "Freelance Consultant",
     "AI Integration",
     "SaaS Development",
     "Web Application Development",
@@ -38,16 +41,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Aarush Tanwar", url: "https://www.aaruush.dev" }],
   creator: "Aarush Tanwar",
   twitter: {
-    title: "Aarush Tanwar | Senior Full-Stack Developer",
+    title: "Aarush Tanwar | Senior Full-Stack Engineer",
     card: "summary_large_image",
     creator: "@thisisaarush",
     description:
-      "Senior Full-Stack Developer specializing in React, Next.js, and AI-powered applications. Available for freelance projects.",
+      "Senior Full-Stack Engineer focused on product engineering. Open to full-time roles and selective remote freelance work.",
   },
   openGraph: {
-    title: "Aarush Tanwar | Senior Full-Stack Developer",
+    title: "Aarush Tanwar | Senior Full-Stack Engineer",
     description:
-      "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 5+ years building scalable SaaS products.",
+      "Senior Full-Stack Engineer specializing in React, Next.js, Node.js, and AI-powered applications. Open to full-time product engineering roles.",
     url: "https://www.aaruush.dev",
     siteName: "Aarush Tanwar",
     locale: "en_US",
@@ -83,7 +86,7 @@ const jsonLd = {
       name: "Aarush Tanwar",
       url: "https://www.aaruush.dev",
       image: "https://www.aaruush.dev/profile_photo.jpg",
-      jobTitle: "Senior Full-Stack Developer",
+      jobTitle: "Senior Full-Stack Engineer",
       worksFor: {
         "@type": "Organization",
         name: "Rightpoint (Genpact)",

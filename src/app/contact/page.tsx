@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/contact-form"
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch to discuss your project. I'm available for freelance full-stack development, AI integration, and SaaS development.",
+    "Get in touch about senior full-time software engineering opportunities or selective remote consulting engagements.",
 }
 
 export default function ContactPage() {
@@ -17,8 +17,9 @@ export default function ContactPage() {
       </h1>
 
       <p className="text-gray-400 mb-12 leading-relaxed max-w-2xl">
-        Have a project in mind? I&apos;d love to hear about it. Fill out the
-        form below or reach out directly — I typically respond within 24 hours.
+        I&apos;m actively open to senior full-time product engineering roles,
+        and available for selective remote consulting work. Share your role,
+        team context, or project scope below.
       </p>
 
       <div className="grid md:grid-cols-2 gap-12">
@@ -33,7 +34,7 @@ export default function ContactPage() {
             <Mail className="w-8 h-8 text-accent mb-4" />
             <h3 className="text-lg font-bold text-white mb-2">Email</h3>
             <p className="text-gray-400 mb-4">
-              For project inquiries and proposals
+              For full-time opportunities and consulting discussions
             </p>
             <Link
               href="mailto:tanwaraarush007@gmail.com"
@@ -71,7 +72,7 @@ export default function ContactPage() {
               Schedule a Call
             </h3>
             <p className="text-gray-400 mb-4">
-              Prefer to talk? Book a 30-min discovery call
+              Prefer to talk? Book a 30-min intro call
             </p>
             <Link
               href="https://calendly.com/thisisaarush"
@@ -98,16 +99,15 @@ export default function ContactPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">2.</span>
-                We&apos;ll schedule a call to discuss your project
+                We&apos;ll discuss role scope, team context, or project needs
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">3.</span>
-                You&apos;ll receive a detailed proposal with timeline and
-                pricing
+                We&apos;ll align on how I can add the most impact
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">4.</span>
-                Once approved, we kick off the project!
+                If there&apos;s a fit, we move forward quickly
               </li>
             </ol>
           </div>
