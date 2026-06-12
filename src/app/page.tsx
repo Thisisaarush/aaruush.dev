@@ -69,7 +69,7 @@ export default function Home() {
               className="fill-green-500 text-green-500 animate-pulse"
             />
             <span className="text-green-500 font-medium">
-              Available for freelance projects
+              Senior Full Stack Engineer — Open to Full-Time Roles
             </span>
           </div>
 
