@@ -52,14 +52,10 @@ export default function Home() {
           </div>
 
           <p>
-            I help startups and businesses build{" "}
-            <span className="text-accent font-medium">
-              scalable web applications
-            </span>{" "}
-            that drive growth. With 6+ years and 50+ projects shipped, I&apos;ve
-            helped clients generate $2M+ in revenue. I specialize in turning
-            ideas into reliable, performant products using React, Next.js,
-            Node.js, and AI integrations.
+            5+ years shipping enterprise software for Fortune 500 clients
+            including Cadillac, Boston Dynamics, and AB InBev at Rightpoint. I
+            specialise in React, Next.js, Node.js, and AI-powered applications —
+            turning complex problems into fast, reliable products.
           </p>
 
           {/* Availability Status */}
@@ -119,13 +115,7 @@ export default function Home() {
           {/* Trust Signals */}
           <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
-              🚀 50+ projects delivered
-            </span>
-            <span className="flex items-center gap-1">
-              💰 $2M+ client revenue generated
-            </span>
-            <span className="flex items-center gap-1">
-              ⚡ Response: under 24 hours
+              🚀 Multiple products shipped
             </span>
             <span className="flex items-center gap-1">🌏 IST (UTC+5:30)</span>
           </div>
@@ -305,27 +295,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="border border-accent/10 p-6 hover:border-accent/30 transition-colors">
-              <p className="text-gray-300 mb-4 italic">
-                &quot;As a non-technical founder, I was nervous about hiring a
-                developer. Aarush explained everything clearly, delivered on
-                time, and the MVP he built helped us raise our seed round. He
-                even documented everything so our new team could take over
-                easily.&quot;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
-                  AP
-                </div>
-                <div>
-                  <p className="font-medium text-white">Ananya Patel</p>
-                  <p className="text-sm text-gray-400">
-                    Founder, HealthTrack Startup
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -394,9 +363,9 @@ export default function Home() {
               <h3 className="text-white font-bold mt-1 group-hover:text-accent transition-colors">
                 E-Commerce Modernization
               </h3>
-              <p className="text-gray-400 text-sm mt-2">Page load: 8s → 2s</p>
-              <p className="text-green-400 text-xs mt-1">
-                +180% Black Friday revenue
+              <p className="text-gray-400 text-sm mt-2">
+                Rebuilt e-commerce platform with Next.js, improving performance
+                and checkout experience
               </p>
             </Link>
             <Link
@@ -407,8 +376,9 @@ export default function Home() {
               <h3 className="text-white font-bold mt-1 group-hover:text-accent transition-colors">
                 Digital Ordering Platform
               </h3>
-              <p className="text-gray-400 text-sm mt-2">Order errors: -96%</p>
-              <p className="text-green-400 text-xs mt-1">38 hrs/week saved</p>
+              <p className="text-gray-400 text-sm mt-2">
+                Built B2B ordering system for AB InBev used by retailers daily
+              </p>
             </Link>
             <Link
               href="/case-studies"
@@ -419,10 +389,8 @@ export default function Home() {
                 AI Customer Support
               </h3>
               <p className="text-gray-400 text-sm mt-2">
-                94% response accuracy
-              </p>
-              <p className="text-green-400 text-xs mt-1">
-                60% ticket reduction
+                Context-aware AI support platform with RAG-based knowledge
+                retrieval and human escalation
               </p>
             </Link>
           </div>

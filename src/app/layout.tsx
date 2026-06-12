@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Aarush Tanwar",
   },
   description:
-    "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 6+ years building scalable SaaS products. Available for freelance projects.",
+    "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 5+ years building scalable SaaS products. Available for freelance projects.",
   keywords: [
     "Full-Stack Developer",
     "React Developer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aarush Tanwar | Senior Full-Stack Developer",
     description:
-      "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 6+ years building scalable SaaS products.",
+      "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and AI-powered applications. 5+ years building scalable SaaS products.",
     url: "https://www.aaruush.dev",
     siteName: "Aarush Tanwar",
     locale: "en_US",

@@ -1,19 +1,11 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import {
-  ArrowUpRight,
-  TrendingUp,
-  Clock,
-  Users,
-  DollarSign,
-  Zap,
-  Shield,
-} from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Detailed case studies showcasing real-world projects, challenges solved, and measurable results delivered.",
+    "Detailed case studies showcasing real-world projects, challenges solved, and product impact delivered.",
 }
 
 const caseStudies = [
@@ -21,32 +13,12 @@ const caseStudies = [
     title: "E-Commerce Platform Modernization",
     client: "Raymour & Flanigan",
     industry: "Furniture Retail",
-    duration: "4 months",
     challenge:
-      "The client's legacy e-commerce platform was struggling with slow page loads (8+ seconds), frequent crashes during peak traffic, and a checkout abandonment rate of 72%. Their Black Friday sales were being lost to competitors.",
+      "The client's legacy e-commerce platform was struggling with slow pages, frequent crashes during peak traffic, and a checkout flow that created friction for customers.",
     solution:
       "Rebuilt the frontend with Next.js and implemented server-side rendering for SEO. Designed a microservices architecture with real-time inventory sync across 145+ stores. Added Redis caching layer and implemented optimistic UI updates for cart operations.",
-    results: [
-      { metric: "Page Load Time", value: "2.1s", change: "-74%", icon: Clock },
-      {
-        metric: "Checkout Abandonment",
-        value: "41%",
-        change: "-43%",
-        icon: TrendingUp,
-      },
-      {
-        metric: "Black Friday Revenue",
-        value: "$2.4M",
-        change: "+180%",
-        icon: DollarSign,
-      },
-      {
-        metric: "Concurrent Users",
-        value: "15K+",
-        change: "3x capacity",
-        icon: Users,
-      },
-    ],
+    impact:
+      "Rebuilt e-commerce platform with Next.js, improving performance and checkout experience.",
     technologies: [
       "Next.js",
       "Node.js",
@@ -67,37 +39,11 @@ const caseStudies = [
     title: "B2B Digital Ordering Platform",
     client: "MyBees (AB InBev)",
     industry: "Beverage Distribution",
-    duration: "6 months",
     challenge:
-      "Retailers were placing orders via phone calls, leading to errors, delayed deliveries, and no visibility into order status. The manual process was costing the company 40+ hours per week in order corrections.",
+      "Retailers were placing orders via phone calls, leading to errors, delayed deliveries, and limited visibility into order status for both retailers and operations teams.",
     solution:
       "Built a mobile-first B2B ordering platform with real-time pricing updates, inventory availability, and delivery scheduling. Implemented offline-first architecture for retailers in areas with poor connectivity. Created admin dashboard with analytics for distributor operations.",
-    results: [
-      {
-        metric: "Order Errors",
-        value: "0.3%",
-        change: "-96%",
-        icon: Shield,
-      },
-      {
-        metric: "Order Processing",
-        value: "2 min",
-        change: "-85%",
-        icon: Zap,
-      },
-      {
-        metric: "Weekly Time Saved",
-        value: "38 hrs",
-        change: "Automated",
-        icon: Clock,
-      },
-      {
-        metric: "Retailer Adoption",
-        value: "2,400+",
-        change: "in 3 months",
-        icon: Users,
-      },
-    ],
+    impact: "Built B2B ordering system for AB InBev used by retailers daily.",
     technologies: [
       "React Native",
       "Node.js",
@@ -117,37 +63,12 @@ const caseStudies = [
     title: "AI-Powered Customer Support SaaS",
     client: "Verto AI (Personal Project)",
     industry: "SaaS / AI",
-    duration: "3 months",
     challenge:
       "Businesses were spending thousands on customer support while providing slow, inconsistent responses. Existing chatbot solutions couldn't understand context or learn from company-specific documentation.",
     solution:
       "Built a multi-tenant SaaS platform with RAG-based AI that learns from uploaded documents. Implemented embeddable chat widget that companies can add to their sites in minutes. Created real-time admin dashboard for conversation monitoring and AI training.",
-    results: [
-      {
-        metric: "Response Accuracy",
-        value: "94%",
-        change: "vs 60% generic AI",
-        icon: TrendingUp,
-      },
-      {
-        metric: "Avg Response Time",
-        value: "1.2s",
-        change: "Instant",
-        icon: Zap,
-      },
-      {
-        metric: "Support Ticket Reduction",
-        value: "60%",
-        change: "Automated",
-        icon: Clock,
-      },
-      {
-        metric: "Setup Time",
-        value: "5 min",
-        change: "Self-serve",
-        icon: Users,
-      },
-    ],
+    impact:
+      "Context-aware AI support platform with RAG-based knowledge retrieval and human escalation.",
     technologies: [
       "Next.js",
       "Convex",
@@ -173,9 +94,8 @@ export default function CaseStudiesPage() {
       </h1>
 
       <p className="text-gray-400 mb-12 leading-relaxed max-w-2xl">
-        Real projects, real challenges, real results. Here&apos;s how I&apos;ve
-        helped businesses solve complex problems and achieve measurable
-        outcomes.
+        Real projects, real challenges, real outcomes. Here&apos;s how I&apos;ve
+        helped businesses solve complex problems and ship better products.
       </p>
 
       <div className="space-y-16">
@@ -193,9 +113,7 @@ export default function CaseStudiesPage() {
                 <h2 className="text-2xl font-bold text-white mt-1">
                   {study.title}
                 </h2>
-                <p className="text-gray-400 text-sm mt-1">
-                  {study.industry} • {study.duration}
-                </p>
+                <p className="text-gray-400 text-sm mt-1">{study.industry}</p>
               </div>
             </div>
 
@@ -215,23 +133,12 @@ export default function CaseStudiesPage() {
               </div>
             </div>
 
-            {/* Results */}
+            {/* Impact */}
             <div className="bg-accent/5 border border-accent/20 p-6 mb-8">
-              <h3 className="text-white font-bold mb-4">Results & Impact</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {study.results.map((result, idx) => (
-                  <div key={idx} className="text-center">
-                    <result.icon className="w-6 h-6 text-accent mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-white">
-                      {result.value}
-                    </p>
-                    <p className="text-xs text-gray-400">{result.metric}</p>
-                    <p className="text-xs text-green-400 mt-1">
-                      {result.change}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <h3 className="text-white font-bold mb-2">Impact</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {study.impact}
+              </p>
             </div>
 
             {/* Technologies */}
@@ -265,10 +172,11 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <div className="mt-16 border border-accent/40 bg-accent/5 p-8 text-center">
         <h2 className="text-2xl font-bold text-white mb-2">
-          Want similar results for your project?
+          Want similar outcomes for your project?
         </h2>
         <p className="text-gray-400 mb-6 max-w-md mx-auto">
-          Let&apos;s discuss how I can help you achieve measurable outcomes.
+          Let&apos;s discuss how I can help you build high-impact product
+          experiences.
         </p>
         <Link
           href="/contact"
