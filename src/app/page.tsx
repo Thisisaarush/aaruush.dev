@@ -41,7 +41,7 @@ export default function Home() {
               <div className="flex flex-col gap-1 text-sm">
                 <span className="flex items-center gap-2 text-gray-400">
                   <LucideBuilding size={16} />
-                  <p>SDE3 @ Rightpoint (Genpact)</p>
+                  <p>Senior Software Engineer @ Genpact</p>
                 </span>
                 <span className="flex items-center gap-2 text-gray-400">
                   <MapPinHouse size={16} />
@@ -53,7 +53,7 @@ export default function Home() {
 
           <p>
             5+ years shipping enterprise software for Fortune 500 clients
-            including Cadillac, Boston Dynamics, and AB InBev at Rightpoint. I
+            including Cadillac, Boston Dynamics, and AB InBev at Genpact. I
             specialise in React, Next.js, Node.js, and AI-powered applications —
             turning complex problems into fast, reliable products.
           </p>
@@ -185,17 +185,15 @@ export default function Home() {
           </h2>
 
           <Link
-            href={"https://www.rightpoint.com/"}
+            href={"https://www.genpact.com/services/experience"}
             target="_blank"
             className="flex flex-col gap-2 group"
           >
             <span>
               <h3 className="text-lg font-bold group-hover:text-accent">
-                Rightpoint (Genpact)
+                Genpact
               </h3>
-              <p className="text-gray-400 text-sm">
-                Software Engineer 3 (January 2022 - Present)
-              </p>
+              <p className="text-gray-400 text-sm">Senior Software Engineer</p>
             </span>
             <p>
               Leading full-stack development of an enterprise SaaS platform
@@ -289,7 +287,7 @@ export default function Home() {
                 <div>
                   <p className="font-medium text-white">Kevin Patel</p>
                   <p className="text-sm text-gray-400">
-                    Technical Architect, Rightpoint (Genpact)
+                    Technical Architect, Genpact
                   </p>
                 </div>
               </div>

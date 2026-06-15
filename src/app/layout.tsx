@@ -89,7 +89,7 @@ const jsonLd = {
       jobTitle: "Senior Full-Stack Engineer",
       worksFor: {
         "@type": "Organization",
-        name: "Rightpoint (Genpact)",
+        name: "Genpact",
       },
       sameAs: [
         "https://github.com/thisisaarush",
